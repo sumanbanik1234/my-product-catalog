@@ -3,35 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Catalog</title>
+    <title>SKS Store</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Our Products</h1>
-        
+
+    <header>
+        <h1>SKS</h1>
+        <h2>MR. KAJAL KANSABANIK</h2>
+    </header>
+
+    <div class="product-container">
         <div class="product">
-            <img src="images/product1.jpg" alt="Product 1">
-            <h2>Product 1</h2>
-            <p>Product 1 details go here.</p>
-            <button onclick="orderNow(1)">Order Now</button>
+            <img src="images/product1_1.jpg" class="main-image">
+            <div class="thumbnail-container">
+                <img src="images/product1_1.jpg" class="thumbnail">
+                <img src="images/product1_2.jpg" class="thumbnail">
+            </div>
+            <h3>Product 1</h3>
+            <p>Description of Product 1</p>
+            <p>Price: ₹500</p>
+            <a href="order.html?product=1" class="order-btn">Order Now</a>
         </div>
 
         <div class="product">
-            <img src="images/product2.jpg" alt="Product 2">
-            <h2>Product 2</h2>
-            <p>Product 2 details go here.</p>
-            <button onclick="orderNow(2)">Order Now</button>
+            <img src="images/product2_1.jpg" class="main-image">
+            <div class="thumbnail-container">
+                <img src="images/product2_1.jpg" class="thumbnail">
+                <img src="images/product2_2.jpg" class="thumbnail">
+            </div>
+            <h3>Product 2</h3>
+            <p>Description of Product 2</p>
+            <p>Price: ₹700</p>
+            <a href="order.html?product=2" class="order-btn">Order Now</a>
         </div>
-
-        <!-- Add more products as needed -->
-
     </div>
 
-    <script>
-        function orderNow(productNumber) {
-            alert("📍 ঠিকানা: বহরমপুর, সৈদাবাদ, কুঞ্জঘাটা\n📞 এই নাম্বারে যোগাযোগ করুন বা WhatsApp করুন: 8436510613\n📌 প্রোডাক্ট নম্বর: " + productNumber);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
