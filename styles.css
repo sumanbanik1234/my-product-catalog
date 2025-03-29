@@ -57,7 +57,7 @@ nav a {
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
-    width: 40%;
+    width: 65%;
 }
 
 .slider {
@@ -88,6 +88,17 @@ nav a {
     cursor: pointer;
     margin: 5px;
     border-radius: 5px;
+}
+
+footer {
+    background: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
 }
 
 .pagination button:hover {
