@@ -5,18 +5,50 @@ body {
     padding: 0;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.store-name {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+nav {
+    background: #0056b3;
+    padding: 10px;
     text-align: center;
 }
 
-h1 {
+nav a {
     color: white;
-    background-color: #0057b3;
-    padding: 10px;
-    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
 }
 
 .product {
@@ -24,34 +56,45 @@ h1 {
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: inline-block;
     width: 40%;
 }
 
-.product img {
+.slider {
+    position: relative;
+    max-width: 100%;
+}
+
+.slider img {
     width: 100%;
-    height: auto;
     border-radius: 5px;
+    display: none;
 }
 
-.product h2 {
-    color: #333;
+.slider img:first-child {
+    display: block;
 }
 
-.product p {
-    color: #666;
+.pagination {
+    margin-top: 20px;
 }
 
-button {
-    background-color: #0073e6;
+.pagination button {
+    padding: 10px 15px;
+    font-size: 18px;
+    background: #0073e6;
     color: white;
     border: none;
-    padding: 10px;
     cursor: pointer;
+    margin: 5px;
     border-radius: 5px;
 }
 
-button:hover {
-    background-color: #0057b3;
+.pagination button:hover {
+    background: #0057b3;
+}
+
+.pagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
 }
