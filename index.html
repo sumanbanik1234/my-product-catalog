@@ -3,118 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SHREE KRISHN STORE</title>
+  <title>SHREE KRISHNA STORE</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Header Design */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #007bff;
-      color: white;
-      padding: 15px;
-    }
-    .logo {
-      width: 80px;
-      height: 80px;
-      margin-left: 15px;
-      border-radius: 50%;
-    }
-    .store-name {
-      font-size: 28px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      flex-grow: 1;
-    }
-
-    /* Navigation Menu */
-    nav {
-      background: #0056b3;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      margin: 10px;
-      padding: 10px 20px;
-      display: inline-block;
-    }
-    nav a:hover {
-      background: #004494;
-      border-radius: 5px;
-    }
-
-    /* Product Section */
-    .container {
-      text-align: center;
-      padding: 20px;
-    }
-    .product {
-      display: inline-block;
-      width: 45%;
-      background: #f8f8f8;
-      padding: 20px;
-      margin: 10px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Image Slider */
-    .image-slider {
-      position: relative;
-      max-width: 100%;
-      height: 300px;
-      overflow: hidden;
-    }
-    .image-slider img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: none;
-      border-radius: 10px;
-    }
-    .image-slider img.active {
-      display: block;
-    }
-    .prev, .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-    }
-    .prev { left: 10px; }
-    .next { right: 10px; }
-
-    /* Notice Section */
-    .notice {
-      font-size: 20px;
-      font-weight: bold;
-      color: red;
-      margin-top: 30px;
-      text-align: center;
-      padding: 15px;
-      background: #ffe6e6;
-      border-radius: 10px;
-    }
-  </style>
 </head>
 <body>
 
+  <!-- Header Section -->
   <header>
     <img src="images/logo.png" alt="Store Logo" class="logo">
-    <h1 class="store-name">SHREE KRISHN STORE</h1>
+    <h1 class="store-name">SHREE KRISHNA STORE</h1>
   </header>
 
+  <!-- Navigation Menu -->
   <nav>
     <a href="#" onclick="showSection('product-list')">OUR PRODUCTS</a>
     <a href="#" onclick="showSection('shop-details')">SHOP DETAILS</a>
@@ -123,34 +23,11 @@
   <!-- Product List Section -->
   <div class="container" id="product-list">
     <h1>Our Products</h1>
-    
-    <div class="product">
-      <h2>Product 1</h2>
-      <div class="image-slider" id="slider1">
-        <img src="images/product1-1.jpg" class="active">
-        <img src="images/product1-2.jpg">
-        <img src="images/product1-3.jpg">
-        <button class="prev" onclick="prevImage(1)">❮</button>
-        <button class="next" onclick="nextImage(1)">❯</button>
-      </div>
-      <p>বিবরণ: এই প্রোডাক্টটি উচ্চমানের।</p>
-      <button onclick="showOrder(1)">Order Now</button>
+    <div class="products" id="products-container"></div>
+    <div class="pagination">
+      <button id="prevPage" onclick="prevPage()">←</button>
+      <button id="nextPage" onclick="nextPage()">→</button>
     </div>
-
-    <div class="product">
-      <h2>Product 2</h2>
-      <div class="image-slider" id="slider2">
-        <img src="images/product2-1.jpg" class="active">
-        <img src="images/product2-2.jpg">
-        <img src="images/product2-3.jpg">
-        <button class="prev" onclick="prevImage(2)">❮</button>
-        <button class="next" onclick="nextImage(2)">❯</button>
-      </div>
-      <p>বিবরণ: Product 2 details go here.</p>
-      <button onclick="showOrder(2)">Order Now</button>
-    </div>
-
-    <div class="notice">আরো নতুন নতুন ও অন্য জিনিস কিনতে বা দেখতে দোকানে আসুন, ওয়েবসাইটে সব দেওয়া সম্ভব হয়নি।</div>
   </div>
 
   <!-- Shop Details Section -->
@@ -161,33 +38,7 @@
     <img src="images/shop3.jpg" width="80%">
   </div>
 
-  <script>
-    function showOrder(productNumber) {
-      alert("অর্ডার করতে কল করুন: 8597779336, 8436516613");
-    }
-
-    function showSection(sectionId) {
-      document.getElementById("product-list").style.display = "none";
-      document.getElementById("shop-details").style.display = "none";
-      document.getElementById(sectionId).style.display = "block";
-    }
-
-    function nextImage(productId) {
-      let slider = document.getElementById(slider${productId});
-      let images = slider.getElementsByTagName("img");
-      let activeIndex = [...images].findIndex(img => img.classList.contains("active"));
-      images[activeIndex].classList.remove("active");
-      images[(activeIndex + 1) % images.length].classList.add("active");
-    }
-
-    function prevImage(productId) {
-      let slider = document.getElementById(slider${productId});
-      let images = slider.getElementsByTagName("img");
-      let activeIndex = [...images].findIndex(img => img.classList.contains("active"));
-      images[activeIndex].classList.remove("active");
-      images[(activeIndex - 1 + images.length) % images.length].classList.add("active");
-    }
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
