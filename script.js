@@ -1,5 +1,5 @@
 function showOrder() {
-    alert("অর্ডার করতে কল করুন: 8597779336, 8436516613");
+    alert("অর্ডার করতে কল করুন: 8597779336(Whatsapp), 8436516613(Whatsapp)");
 }
 
 function showSection(sectionId) {
