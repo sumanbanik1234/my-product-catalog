@@ -9,7 +9,7 @@ function showSection(sectionId) {
 }
 
 const products = [
-    { name: "Milton water bottle", images: ["images/Milton water bottle"-1.jpg", "images/Milton water bottle-2.jpg", "images/Milton water bottle-3.jpg"] },
+    { name: "product 1", images: ["images/product1"-1.jpg", "images/product1-2.jpg", "images/product1-3.jpg"] },
     { name: "Product 2", images: ["images/product2-1.jpg", "images/product2-2.jpg", "images/product2-3.jpg"] },
     { name: "Product 3", images: ["images/product3-1.jpg", "images/product3-2.jpg", "images/product3-3.jpg"] },
     { name: "Product 4", images: ["images/product4-1.jpg", "images/product4-2.jpg", "images/product4-3.jpg"] },
